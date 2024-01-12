@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#013328;
+}
+ul {
+  list-style-type: none;
+  margin-left: 28%;
+  margin-right: 26%;
+  padding: 0;
+  float: center;
+}
+li {
+  display: inline;
+  align-content: center;
+  margin-left:4%;
+  margin-right: 4%;
+
+}
+a{
+	text-decoration: none;
+	color:#FBAF94;
+	text-transform: uppercase;
+
+}
+a:hover{
+	background:#E3DCD2;
+	color:#013328;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+.flip{
+	color: #FBAF94;
+	text-align: center;
+	margin-top:20%;
+	font-size:50px;
+}
+.flip span {
+  position: relative;
+  display: inline-block;
+  animation: flip 1s infinite;
+  animation-iteration-count: 1;
+  animation-delay: calc(.3s * var(--i));
+}
+@keyframes flip {
+	0%,80% {
+    transform: rotateY(360deg) 
+	}
+  }
+.positions{
+	color: #FBAF94;
+	font-size: 24px;
+	text-align:center;
+	
+}
+.box{
+	opacity:0;
+	position: absolute;
+	text-align: center;
+	width:100%;
+}
+.b1{
+	animation: ani1 10s infinite;
+}
+.b2{
+	animation: ani2 10s infinite;
+}
+.b3{
+	animation: ani3 10s infinite;
+}
+
+@keyframes ani1{
+	0%{
+		opacity: 0;
+	}
+	40%{
+		opacity: 1;
+	}
+	55%{
+	 	opacity:0;
+	}
+}
+@keyframes ani2{
+	55%{
+		opacity: 0;
+	}
+	65%{
+		opacity: 1;
+	}
+	85%{
+	 	opacity:0;
+	}
+}
+@keyframes ani3{
+	85%{
+		opacity: 0;
+	}
+	95%{
+		opacity: 1;
+	}
+	100%{
+	 	opacity:0;
+	}
+}
+
