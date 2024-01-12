@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#013328;
+	animation: everything 10s infinite;
+	animation-iteration-count: 1;
+}
+@keyframes everything{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+	 	opacity:2;
+	}
+}
+
+.navbar {
+  list-style-type: none;
+  margin-left: 28%;
+  margin-right: 26%;
+  padding: 0;
+  float: center;
+}
+.navitems {
+  display: inline;
+  align-content: center;
+  margin-left:4%;
+  margin-right: 4%;
+
+}
+a{
+	text-decoration: none;
+	color:#FBAF94;
+	text-transform: uppercase;
+
+}
+a:hover{
+	background:#E3DCD2;
+	color:#013328;
+	padding: 8px;
+	border-radius: 5px;
+} 
+.about{
+	color: #FBAF94;
+	text-align: center;
+	font-size:40px;
+	margin-top:5%;
+	letter-spacing: 5px;
+	line-height: .25;
+	animation: anim 10s infinite;
+	animation-iteration-count: 1;
+}
+
+@keyframes anim{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+	 	opacity:2;
+	}
+}
+img{
+	height:300px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+
+}
+.text{
+	text-align:center;
+	color:#013328;
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	background: #E3DCD2;
+	padding:14px;
+	border-radius:10px;
+	
+}
+.title{
+	text-align:center;
+	color:#FAAE93;
+	letter-spacing:5px;
+	font-size: 24px;
+}

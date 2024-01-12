@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#013328;
+	animation: everything 10s infinite;
+	animation-iteration-count: 1;
+}
+@keyframes everything{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+	 	opacity:2;
+	}
+}
+.navbar {
+  list-style-type: none;
+  margin-left: 28%;
+  margin-right: 26%;
+  padding: 0;
+  float: center;
+}
+.navitems {
+  display: inline;
+  align-content: center;
+  margin-left:4%;
+  margin-right: 4%;
+
+}
+a{
+	text-decoration: none;
+	color:#FBAF94;
+	text-transform: uppercase;
+
+}
+a:hover{
+	background:#E3DCD2;
+	color:#013328;
+	padding: 8px;
+	border-radius: 5px;
+} 
+
+.text{
+	float:right;
+}
+
+p{
+	color: #FBAF94;
+	font-size: 40px;
+	text-align: center;
+	margin-top:5%;
+	letter-spacing: 5px;
+	line-height: .25;
+}
+.fill{
+	font-size: 16px;
+}
+img{
+	height:275px;
+	padding-left: 20px;
+	padding-right: 20px;
+	animation: everything 10s infinity;
+}
+.firstportfolioproject{
+	background-color: #E98C2C;
+}
+.firstrow{
+	display:flex;
+	padding: 10px;
+	align-content: center;
+	margin-left: 9%;
+	margin-right: 4%;
+}
+.secondrow{
+	display:flex;
+	padding: 10px;
+	align-content: center;
+	margin-left: 9%;
+	margin-right: 4%;
+}
+.renw{
+	margin-left:-96px
+}
+.firstrow a.img:hover{
+	border-radius:0;
+	background:#013328;
+	padding:0px;
+	height:277px;
+}
+.secondrow a.img:hover{
+	border-radius:0;
+	background:#013328;
+	padding:0px;
+	height:277px;
+}
