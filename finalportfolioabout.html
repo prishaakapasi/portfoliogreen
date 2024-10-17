@@ -7,19 +7,22 @@
 </head>
 
 <body>
-<ul class="navbar"> 
-		<li class="navitems"><a href="index.html"> Home </a> </li>
-		<li class="navitems"> <a href="finalportfolioabout.html"> About </a></li>
-		<li class="navitems"> <a href="graphicdesignportfolio.html"> Graphic Design </a> </li>
-		<li class="navitems"> <a href="uxdesign.html"> UX/Web Design </a></li>
-	</ul>
+	<div class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <ul class="navitems">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="finalportfolioabout.html"> About </a></li>
+            <li><a href="graphicdesignportfolio.html"> Graphic Design </a></li>
+            <li><a href="uxdesign.html"> UX/Web Design </a></li>
+        </ul>
+    </div>
 	<p class="about"> ABOUT ME</p>
 	<container id="content"> 
 	<div class="text"> 
 		<p class="start"> Hello there! I'm Prishaa Kapasi a passionate UX Designer based in Colorado. I am a high school student excited to increase my exposure in front end development through creating websites, graphics, and UX designs for companies. </p>
 		
 		<h3> Experience </h3>
-		<p> I have gained several levels of expertise through the variety of classes I've taken or am currently taking including AP Computer Science A, AP Computer Science Principles, AP 2D Art and Design, AP Calculus AB and AP Calculus BC. Additionally, I am a certified UX Designer through the Google UX Design Certification. Check out my resume to learn more! </p>
+		<p> I have gained several levels of expertise through the variety of classes I've taken including AP Computer Science A, AP Computer Science Principles, AP 2D Art and Design, AP Calculus AB and AP Calculus BC. Additionally, I am a certified UX Designer through the Google UX Design Certification. Check out my resume to learn more! </p>
 		<a href="Images/_resume (4).pdf" class="resume" target="_blank"> Resume </a>
 		
 		
@@ -47,4 +50,12 @@
 	</container>
 
 </body>
+
+<script>
+	function toggleMenu() {
+		const nav = document.querySelector('.navitems');
+		nav.classList.toggle('active');
+	}
+</script>
+
 </html>

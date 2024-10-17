@@ -1,106 +1,261 @@
 @charset "utf-8";
 /* CSS Document */
-body{
-	background-color:#013328;
-}
-ul {
-  list-style-type: none;
-  margin-left: 28%;
-  margin-right: 26%;
-  padding: 0;
-  float: center;
-}
-li {
-  display: inline;
-  align-content: center;
-  margin-left:4%;
-  margin-right: 4%;
-
-}
-a{
-	text-decoration: none;
-	color:#FBAF94;
-	text-transform: uppercase;
-
-}
-a:hover{
-	background:#E3DCD2;
-	color:#013328;
-	padding: 8px;
-	border-radius: 5px;
+body {
+    background-color: #013328;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
-.flip{
-	color: #FBAF94;
-	text-align: center;
-	margin-top:20%;
-	font-size:50px;
+.navbar {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.navitems {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.navitems li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+.navitems a {
+    color: #FBAF94;
+    text-decoration: none;
+    padding: 8px 16px; /* Default font size for links */
+}
+
+.hamburger {
+    display: none; /* Hide the hamburger icon by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #FBAF94;
+    cursor: pointer;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust this value to set the vertical position */
+    right: 10px; /* Adjust this value to set the horizontal position */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Responsive styles */
+@media (max-width: 1280px) {
+    /* Adjusted breakpoint for MacBook size */
+    .navitems {
+        display: none; /* Hide the navbar links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 0; /* Set to 0 to extend shading all the way up */
+        width: 100%;
+        left: 0;
+        background-color: rgba(1, 51, 40, 0.7); /* Semi-transparent green background */
+        padding: 10px; /* Optional padding for spacing */
+        gap: 15px; /* Space between items (adjust value as needed) */
+    }
+
+    .navitems.active {
+        display: flex; /* Show the navbar links when active */
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 60px; /* Show the hamburger icon when in mobile view */
+    }
+}
+
+/* Ensure hamburger is hidden on larger screens */
+@media (min-width: 1281px) {
+    .hamburger {
+        display: none; /* Hide the hamburger icon for larger screens */
+    }
+
+    .navitems {
+        display: flex; /* Show nav items in full view */
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #FBAF94;
+    text-transform: uppercase;
+    font-size: 18px; /* Default font size for links */
+}
+a:hover {
+    background: #E3DCD2;
+    color: #013328;
+    padding: 8px;
+    border-radius: 5px;
+} 
+
+.flip {
+    color: #FBAF94;
+    text-align: center;
+    font-size: 60px; /* Increased font size */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 .flip span {
-  position: relative;
-  display: inline-block;
-  animation: flip 1s infinite;
-  animation-iteration-count: 1;
-  animation-delay: calc(.3s * var(--i));
+    position: relative;
+    display: inline-block;
+    animation: flip 1s infinite;
+    animation-iteration-count: 1;
+    animation-delay: calc(.3s * var(--i));
 }
 @keyframes flip {
-	0%,80% {
-    transform: rotateY(360deg) 
-	}
-  }
-.positions{
-	color: #FBAF94;
-	font-size: 24px;
-	text-align:center;
-	
+    0%, 80% {
+        transform: rotateY(360deg);
+    }
 }
-.box{
-	opacity:0;
-	position: absolute;
-	text-align: center;
-	width:100%;
-}
-.b1{
-	animation: ani1 10s infinite;
-}
-.b2{
-	animation: ani2 10s infinite;
-}
-.b3{
-	animation: ani3 10s infinite;
+.positions {
+    color: #FBAF94;
+    font-size: 28px; /* Increased font size */
+    text-align: center;
+    padding-top: 2%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-@keyframes ani1{
-	0%{
-		opacity: 0;
-	}
-	40%{
-		opacity: 1;
-	}
-	55%{
-	 	opacity:0;
-	}
-}
-@keyframes ani2{
-	55%{
-		opacity: 0;
-	}
-	65%{
-		opacity: 1;
-	}
-	85%{
-	 	opacity:0;
-	}
-}
-@keyframes ani3{
-	85%{
-		opacity: 0;
-	}
-	95%{
-		opacity: 1;
-	}
-	100%{
-	 	opacity:0;
-	}
+.container {
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: calc(100vh - 60px); /* Adjust height for navbar */
 }
 
+.box {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.b1 {
+    animation: ani1 10s infinite;
+}
+.b2 {
+    animation: ani2 10s infinite;
+}
+.b3 {
+    animation: ani3 10s infinite;
+}
+
+@keyframes ani1 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+}
+@keyframes ani2 {
+    55% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 0;
+    }
+}
+@keyframes ani3 {
+    85% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Additional responsive styles for smaller screens */
+@media (max-width: 980px) {
+    a{
+        font-size:30px;
+    }
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navitems {
+        margin: 0; /* Remove margins for a cleaner look */
+        width: 100%; /* Full width for navbar items */
+    }
+
+    .navitems li {
+        margin: 15px 0; /* Increased space between items */
+    }
+
+    .flip {
+        font-size: 80px; /* Adjust font size for smaller screens */
+    }
+
+    .positions {
+        font-size: 40px; /* Increased font size for positions */
+    }
+    .hamburger {
+        font-size: 70px; /* Adjust hamburger size */
+    }
+    a{
+        font-size:30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navitems {
+        margin: 0; /* Remove margins for a cleaner look */
+        width: 100%; /* Full width for navbar items */
+    }
+
+    .navitems li {
+        margin: 15px 0; /* Increased space between items */
+    }
+
+    .navitems a {
+        font-size: 40px; /* Increased font size for links */
+    }
+
+    .flip {
+        font-size: 90px; /* Adjust font size for smaller screens */
+    }
+
+    .positions {
+        font-size: 30px; /* Increased font size for positions */
+    }
+    .hamburger {
+        font-size: 50px; /* Adjust hamburger size */
+    }
+}
+
+@media (max-width: 320px) {
+    .flip {
+        font-size: 70px; /* Slightly reduced font size */
+    }
+
+    .positions {
+        font-size: 30px; 
+        padding-top: 10px; /* Adjusted positions font size */
+    }
+
+    .navitems a {
+        font-size: 40px; /* Further increase link font size */
+    }
+}

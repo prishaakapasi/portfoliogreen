@@ -2,25 +2,34 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>UXdesign</title>
+<title>UX Design</title>
 <link href="uxdesign.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<ul class="navbar"> 
-		<li class="navitems"><a href="index.html"> Home </a> </li>
-		<li class="navitems"> <a href="finalportfolioabout.html"> About </a></li>
-		<li class="navitems"> <a href="graphicdesignportfolio.html"> Graphic Design </a> </li>
-		<li class="navitems"> <a href="uxdesign.html"> UX/Web Design </a></li>
-	</ul>
+	<div class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <ul class="navitems">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="finalportfolioabout.html"> About </a></li>
+            <li><a href="graphicdesignportfolio.html"> Graphic Design </a></li>
+            <li><a href="uxdesign.html"> UX/Web Design </a></li>
+        </ul>
+    </div>
 	<p> PROJECTS </p>
 	<div class="firstrow">
-		<a href="camping.html" class="img" target="_blank"> <img src="campweb.png" alt="f"> </a>
-	    <a href="cafeblossomhtml.html" class="img" target="_blank"> <img src="cafeblossom.png" alt="c"></a>
+		<a href="camping.html" class="img" target="_blank"> <img src="Images/campweb.png" alt="f"> </a>
+	    <a href="cafeblossomhtml.html" class="img" target="_blank"> <img src="Images/cafeblossom.png" alt="c"></a>
 	</div>
 	<div class="secondrow"> 
-	<a href="bakery.html" class="img" target="_blank" ><img src="sweetdleigns.png" alt="f"></a> 
-	<a href="renewableroots.html" class="img" target="_blank"> <img src="renewablerotosbutton.png" alt="d" class="renw"></a> </div>
+	<a href="bakery.html" class="img" target="_blank" ><img src="Images/sweetdleigns.png" alt="f"></a> 
+	<a href="renewableroots.html" class="img" target="_blank"> <img src="Images/renewablerotosbutton.png" alt="d" class="renw"></a> </div>
 	
 </body>
+<script>
+	function toggleMenu() {
+		const nav = document.querySelector('.navitems');
+		nav.classList.toggle('active');
+	}
+</script>
 </html>

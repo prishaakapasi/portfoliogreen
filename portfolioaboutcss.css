@@ -1,115 +1,259 @@
-@charset "utf-8";
+@charset "utf-8"; 
 /* CSS Document */
-body{
-	background-color:#013328;
+body {
+	background-color: #013328;
 }
+
 .navbar {
-  list-style-type: none;
-  margin-left: 28%;
-  margin-right: 26%;
-  padding: 0;
-  float: center;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative; /* Ensure relative positioning for absolute elements */
 }
+
 .navitems {
-  display: inline;
-  align-content: center;
-  margin-left:4%;
-  margin-right: 4%;
-
+    margin-left: 4%;
+    margin-right: 4%;
 }
-a{
-	text-decoration: none;
-	color:#FBAF94;
-	text-transform: uppercase;
 
+.navitems li {
+    margin: 0 15px;
+    list-style: none;
 }
-a:hover{
-	background:#E3DCD2;
-	color:#013328;
-	padding: 8px;
-	border-radius: 5px;
+
+.navitems a {
+    color: #FBAF94;
+    text-decoration: none;
+    padding: 8px 16px; /* Default font size for links */
+}
+
+.hamburger {
+    display: none; /* Hide the hamburger icon by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #FBAF94;
+    cursor: pointer;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust this value to set the vertical position */
+    right: 10px; /* Adjust this value to set the horizontal position */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Responsive styles */
+@media (max-width: 1280px) {
+    /* Adjusted breakpoint for MacBook size */
+    .navitems {
+        display: none; /* Hide the navbar links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 0; /* Set to 0 to extend shading all the way up */
+        width: 100%;
+        left: 0;
+        background-color: rgba(1, 51, 40, 0.7); /* Semi-transparent green background */
+        padding: 10px; /* Optional padding for spacing */
+        gap: 15px; /* Space between items (adjust value as needed) */
+    }
+
+	.bullets{
+		font-size: 28px;
+	}
+
+    .navitems.active {
+        display: flex; /* Show the navbar links when active */
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 60px; /* Show the hamburger icon when in mobile view */
+    }
+}
+
+/* Ensure hamburger is hidden on larger screens */
+@media (min-width: 1281px) {
+    .hamburger {
+        display: none; /* Hide the hamburger icon for larger screens */
+    }
+
+    .navitems {
+        display: flex; /* Show nav items in full view */
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #FBAF94;
+    text-transform: uppercase;
+    font-size: 18px; /* Default font size for links */
+}
+a:hover {
+    background: #E3DCD2;
+    color: #013328;
+    padding: 8px;
+    border-radius: 5px;
 } 
 
-.pfp{
-	margin-top:10%;
-	margin-left:15%; 
-	height:300px;
-	
+
+.pfp {
+	margin-top: 10%;
+	margin-left: 15%; 
+	height: 300px;
 }
-.about{
+
+.about {
 	color: #FBAF94;
 	text-align: center;
-	font-size:40px;
-	margin-top:5%;
+	font-size: 40px;
+	margin-top: 5%;
 	letter-spacing: 5px;
 	line-height: .25;
 	animation: anim 10s infinite;
 	animation-iteration-count: 1;
 }
 
-@keyframes anim{
-	0%{
+@keyframes anim {
+	0% {
 		opacity: 0;
 	}
-	50%{
+	50% {
 		opacity: 1;
 	}
-	100%{
-	 	opacity:2;
+	100% {
+	 	opacity: 2;
 	}
 }
 
-
-
-.text{
-	padding:30px;
-	padding-top:7%;
+.text {
+	padding: 30px;
+	padding-top: 7%;
 	background: #E3DCD2;
-	color:#013328;
+	color: #013328;
 	animation: textanimation 10s infinite;
 	animation-iteration-count: 1;
 	border-top-left-radius: 20%;
 	border-top-right-radius: 20%;
-	margin-left:20%;
-	margin-right:20%;
-	text-align:center;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;
 }
-@keyframes textanimation{
-	0%{
-		opacity:0;
-	}
-	50%{
-		opacity:1;
-	}
-	100%{
-		opacity:2;
-	}
-}
-#content{
-	display:flex;
 
+@keyframes textanimation {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 2;
+	}
 }
-.resume{
-	color:#013328;
-	border-style:solid;
+
+#content {
+	display: flex;
+}
+
+.resume {
+	color: #013328;
+	border-style: solid;
 	padding: 8px;
 	border-radius: 10px;
 }
-.start{
+
+.start {
 	font-size: 17px;
 }
-.list{
+
+.list {
 	list-style-type: square; 
 	padding: 0;
-	float:left;
-	margin-left:20%;
+	float: left;
+	margin-left: 20%;
 }
-.otherlist{
+
+.otherlist {
 	list-style-type: square;
-	padding:0;
-	float:right;
-	margin-right:20%;
-	
+	padding: 0;
+	float: right;
+	margin-right: 20%;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 980px) {
+	.about{
+		margin-top:14%;
+		font-size: 60px;
+	}
+	.text {
+		border-top-left-radius: 2px; /* Remove left arch */
+		border-top-right-radius: 2px; /* Remove right arch */
+		margin-left: 5%; /* Adjust left margin */
+		margin-right: 5%; /* Adjust right margin */
+		margin-top:5%;
+	}
+	a{
+		font-size:30px;
+	}
+}
 
+@media (max-width: 480px) {
+	.text {
+		border-top-left-radius: 0; /* Remove left arch */
+		border-top-right-radius: 0; /* Remove right arch */
+		margin-left: 5%; /* Adjust left margin */
+		margin-right: 5%; /* Adjust right margin */
+	}
+}
+
+@media (max-width: 845px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navitems {
+        margin: 0; /* Remove margins for a cleaner look */
+        width: 100%; /* Full width for navbar items */
+    }
+
+    .navitems li {
+        margin: 15px 0; /* Increased space between items */
+    }
+
+    .navitems a {
+        font-size: 40px; /* Increased font size for links on smaller screens */
+    }
+    .hamburger {
+        font-size: 40px; /* Adjust hamburger size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navitems {
+        margin: 0; /* Remove margins for a cleaner look */
+        width: 100%; /* Full width for navbar items */
+    }
+
+    .navitems li {
+        margin: 15px 0; /* Increased space between items */
+    }
+
+    .navitems a {
+        font-size: 40px; /* Increased font size for links */
+    }
+    .hamburger {
+        font-size: 50px; /* Adjust hamburger size */
+    }
+}
+
+@media (max-width: 320px) {
+    .navitems a {
+        font-size: 40px; /* Further increase link font size */
+    }
+}

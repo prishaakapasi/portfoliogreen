@@ -17,19 +17,78 @@ body{
 	}
 }
 .navbar {
-  list-style-type: none;
-  margin-left: 28%;
-  margin-right: 26%;
-  padding: 0;
-  float: center;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
 }
-.navitems {
-  display: inline;
-  align-content: center;
-  margin-left:4%;
-  margin-right: 4%;
 
+.navitems {
+	margin-left: 4%;
+	margin-right: 4%;
 }
+
+.navitems li {
+    margin: 0 15px;
+	list-style: none;
+}
+
+.navitems a {
+    color: #FBAF94;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.hamburger {
+    display: none; /* Hide the hamburger icon by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #FBAF94;
+    cursor: pointer;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust this value to set the vertical position */
+    right: 10px; /* Adjust this value to set the horizontal position */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Responsive styles */
+@media (max-width: 1280px) {
+    /* Adjusted breakpoint for MacBook size */
+    .navitems {
+        display: none; /* Hide the navbar links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 0; /* Set to 0 to extend shading all the way up */
+        width: 100%;
+        left: 0;
+        background-color: rgba(1, 51, 40, 0.7); /* Semi-transparent green background */
+        padding: 10px; /* Optional padding for spacing */
+        gap: 15px; /* Space between items (adjust value as needed) */
+    }
+
+    .navitems.active {
+        display: flex; /* Show the navbar links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon when in mobile view */
+    }
+}
+
+/* Ensure hamburger is hidden on larger screens */
+@media (min-width: 1281px) {
+    .hamburger {
+        display: none; /* Hide the hamburger icon for larger screens */
+    }
+
+    .navitems {
+        display: flex; /* Show nav items in full view */
+    }
+}
+
 a{
 	text-decoration: none;
 	color:#FBAF94;
@@ -43,18 +102,22 @@ a:hover{
 	border-radius: 5px;
 } 
 
-.text{
-	float:right;
+.text {
+	/* Remove float */
+	text-align: center; /* Center the text content */
+	width: 100%; /* Ensures the text takes up the full width of its container */
+	margin: 0 auto; /* Centers the element if it's block-level */
 }
 
-p{
+p {
 	color: #FBAF94;
 	font-size: 40px;
-	text-align: center;
-	margin-top:5%;
+	text-align: center; /* This already centers the text inside the <p> */
+	margin-top: 5%;
 	letter-spacing: 5px;
-	line-height: .25;
+	line-height: 0.25;
 }
+
 .fill{
 	font-size: 16px;
 }
@@ -95,4 +158,26 @@ img{
 	background:#013328;
 	padding:0px;
 	height:277px;
+}
+
+.firstrow, .secondrow {
+	display: flex;
+	justify-content: center; /* Centers images horizontally */
+	padding: 10px;
+	align-content: center;
+	margin-left: auto; /* Adjusted to center */
+	margin-right: auto; /* Adjusted to center */
+	width: fit-content; /* Adjusts row width to fit content */
+}
+@media (max-width: 980px) { /* Adjust the breakpoint as needed */
+    .firstrow, .secondrow {
+        flex-direction: column; /* Switch to column layout on smaller screens */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure the items take up full width on small screens */
+    }
+
+    img {
+        margin-bottom: 10px; /* Optional: Add space between the images */
+		padding: 20px; 
+    }
 }

@@ -9,12 +9,16 @@
 </head>
 
 <body>
-	<ul> 
-		<li><a href="index.html"> Home </a> </li>
-		<li> <a href="finalportfolioabout.html"> About </a></li>
-		<li> <a href="graphicdesignportfolio.html"> Graphic Design </a> </li>
-		<li> <a href="uxdesign.html"> UX/Web Design </a></li>
-	</ul>
+	<div class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <ul class="navitems">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="finalportfolioabout.html"> About </a></li>
+            <li><a href="graphicdesignportfolio.html"> Graphic Design </a></li>
+            <li><a href="uxdesign.html"> UX/Web Design </a></li>
+        </ul>
+    </div>
+	<div class="container"> 
 
 	<div class="flip">
 	   <span style="--i:1">P</span>
@@ -37,6 +41,14 @@
 		<div class="box b2"> GRAPHIC DESIGN</div>
 		<div class="box b3"> WEB DESIGN </div>
 	</div>
+	</div>
 
 </body>
+
+<script>
+	function toggleMenu() {
+		const nav = document.querySelector('.navitems');
+		nav.classList.toggle('active');
+	}
+</script>
 </html>

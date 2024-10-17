@@ -5,6 +5,45 @@ body{
 	animation: everything 10s infinite;
 	animation-iteration-count: 1;
 }
+.navbar {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.navitems {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.navitems li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+.navitems a {
+    color: #FBAF94;
+    text-decoration: none;
+    padding: 8px 16px; /* Default font size for links */
+}
+
+.hamburger {
+    display: none; /* Hide the hamburger icon by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #FBAF94;
+    cursor: pointer;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust this value to set the vertical position */
+    right: 10px; /* Adjust this value to set the horizontal position */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
 @keyframes everything{
 	0%{
 		opacity: 0;
@@ -90,3 +129,11 @@ body {
 			padding: 8px;
 			border-radius:10px;
         }
+
+@media (max-width: 980px) {
+    p{
+        font-size:60px;
+        padding-top:10%;
+    }
+
+}
