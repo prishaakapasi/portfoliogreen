@@ -97,7 +97,7 @@ a:hover {
 .flip {
     color: #FBAF94;
     text-align: center;
-    font-size: 60px; /* Increased font size */
+    font-size: 50px; /* Increased font size */
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
