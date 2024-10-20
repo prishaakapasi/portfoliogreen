@@ -16,6 +16,13 @@ body{
 	 	opacity:2;
 	}
 }
+.paintpalz{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:10px;
+    width:473px;
+}
 .navbar {
     list-style-type: none;
     margin: 0 auto;
@@ -245,5 +252,9 @@ img{
 
     p{
         font-size: 60px;
+    }
+    .paintpalz{
+        height:500px;
+        width:84%;
     }
 }
