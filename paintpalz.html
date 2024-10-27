@@ -3,19 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>Paint Palz</title>
-<link href="camping.css" rel="stylesheet" type="text/css">
+<link href="paintpalz.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<ul class="navbar"> 
-		<li class="navitems"><a href="index.html"> Home </a> </li>
-		<li class="navitems"> <a href="finalportfolioabout.html"> About </a></li>
-		<li class="navitems"> <a href="graphicdesignportfolio.html"> Graphic Design </a> </li>
-		<li class="navitems"> <a href="uxdesign.html"> UX/Web Design </a></li>
-	</ul>
+	<div class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <ul class="navitems">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="finalportfolioabout.html"> About </a></li>
+            <li><a href="graphicdesignportfolio.html"> Graphic Design </a></li>
+            <li><a href="uxdesign.html"> UX/Web Design </a></li>
+        </ul>
+    </div>
 	<div class="content"> 
 		<p class="about"> Paint Palz </p>
-		<img src="/Images/paintpalzonipad.png" alt="img" style="height:400px; width:300px">
+		<img src="/Images/paintpalzonipad.png" alt="img" style="height:400px; width:300px" class="ipadimg">
 		<p class="text"> "Paint Palz" is envisioned to serve as a therapeutic outlet for pediatric patients in hospitals. I wanted to help hospital patients feel more connected and less isolated during their hospital stay. The app creates a supportive environment where kids can express themselves creatively, alleviating some of the stress and loneliness associated with hospital stays. Paint Palz is divided into several features, with a goal of engaging young patients and improving their emotional well-being. Looking forward, I hope to continue improving the user interface until it is ready to implement into hospitals.
         </p>
 		<h3 class="title"> DESIGN PROCESS </h3>
