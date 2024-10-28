@@ -5,6 +5,40 @@ body {
 	animation: everything 10s infinite;
 	animation-iteration-count: 1;
 }
+img {
+	height: 300px; /* Default height */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto; /* Changed to auto for flexible width */
+}
+.title {
+	text-align: center;
+	color: #FAAE93;
+	letter-spacing: 5px;
+	font-size: 20px; /* Decrease font size */
+}
+
+.text {
+	text-align: center;
+	color: #013328;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	background: #E3DCD2;
+	padding: 10px;
+	border-radius: 10px;
+}
+.about {
+	color: #FBAF94;
+	text-align: center;
+	font-size: 30px; /* Decrease font size */
+	margin-top: 5%;
+	letter-spacing: 5px;
+	line-height: 0.25;
+	animation: anim 10s infinite;
+	animation-iteration-count: 1;
+}
 
 @keyframes everything {
 	0% {
@@ -79,46 +113,26 @@ a:hover {
 		gap: 15px; /* Space between items (adjust value as needed) */
 	}
 
+	.title{
+		font-size: 45px;
+	}
 	.navitems.active {
 		display: flex; /* Show the navbar links when active */
 	}
 
 	.hamburger {
 		display: block; /* Show the hamburger icon when in mobile view */
-	}
-}
-
-/* Ensure hamburger is hidden on larger screens */
-@media (max-width: 1280px) {
-	.navitems {
-		display: none;
-		flex-direction: column;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		left: 0;
-		background-color: rgba(1, 51, 40, 0.7);
-		padding: 10px;
-		gap: 15px;
-	}
-
-	.navitems.active {
-		display: flex;
-	}
-
-	.hamburger {
-		display: block;
 		font-size: 60px;
 	}
 }
 
 @media (min-width: 1281px) {
 	.hamburger {
-		display: none;
+		display: none; /* Ensure hamburger is hidden on larger screens */
 	}
 
 	.navitems {
-		display: flex;
+		display: flex; /* Show navbar links on larger screens */
 	}
 }
 
@@ -130,20 +144,32 @@ a:hover {
 
 	.about {
 		margin-top: 14%;
-		font-size: 40px; /* Decrease about section font size */
+		font-size: 80px; /* Decrease about section font size */
 	}
 
 	a {
 		font-size: 25px; /* Decrease link font size */
 	}
-	.ipadimg {
-		width:500px;
+	.ipadimg{
+		width:440px;
+		height:620px;
+	}
+	.text{
+		width: 80%;
+	}
+	.screen{
+		width:390px;
+		height:590px;
+	}
+	.design{
+		width:700px;
+		height:390px;
 	}
 }
 
 @media (max-width: 480px) {
 	.navbar {
-		flex-direction: column;
+		flex-direction: column; /* Stack navbar items vertically on smaller screens */
 	}
 
 	.navitems {
@@ -162,21 +188,8 @@ a:hover {
 	.hamburger {
 		font-size: 50px;
 	}
-	.ipadimg {
-		width:500px;
-	}
 }
 
-.about {
-	color: #FBAF94;
-	text-align: center;
-	font-size: 30px; /* Decrease font size */
-	margin-top: 5%;
-	letter-spacing: 5px;
-	line-height: 0.25;
-	animation: anim 10s infinite;
-	animation-iteration-count: 1;
-}
 
 @keyframes anim {
 	0% {
@@ -190,28 +203,6 @@ a:hover {
 	}
 }
 
-img {
-	height: 300px; /* Default height */
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%; /* Default width */
-}
 
-.text {
-	text-align: center;
-	color: #013328;
-	margin-left: auto;
-	margin-right: auto;
-	width: 60%;
-	background: #E3DCD2;
-	padding: 14px;
-	border-radius: 10px;
-}
 
-.title {
-	text-align: center;
-	color: #FAAE93;
-	letter-spacing: 5px;
-	font-size: 20px; /* Decrease font size */
-}
+
