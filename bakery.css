@@ -162,10 +162,14 @@ a:hover {
 		height:700px;
 	}
 	.design{
-		width:480px;
+		width:540px;
 		height:660px;
 	}
 	.userflow{
+		width:700px;
+		height:490px;
+	}
+    .persona{
 		width:700px;
 		height:490px;
 	}
